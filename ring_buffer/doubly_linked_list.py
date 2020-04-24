@@ -136,3 +136,9 @@ class DoublyLinkedList:
             current = current.next
 
         return max_value
+
+    def insert_before(self, node, value):
+        node.insert_before(value)
+        if node == self.head:
+            self.head = self.head.prev
+        self.length += 1
